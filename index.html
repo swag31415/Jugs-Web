@@ -2,8 +2,7 @@
 
 <head>
   <title>Jugs</title>
-  <!-- TODO Add logo -->
-  <!-- <link rel="icon" href="logo.png" type="image/x-icon"> -->
+  <link rel="icon" href="jugs.png" type="image/x-icon">
   <!-- Our Styles -->
   <link rel="stylesheet" href="css/main.css">
   <insert-html link="https://swag31415.github.io/Portfolio/inserts/head.html"></insert-html>
@@ -12,11 +11,41 @@
 <body>
   <insert-html link="https://swag31415.github.io/Portfolio/inserts/menu.html"></insert-html>
   <main class="container">
-    <!-- TODO Add body -->
+    <h1>Jugs</h1>
+    <div class="row">
+      <div class="input-field col s3">
+        <button id="add_jug" class="btn green">Add Jug</button>
+      </div>
+      <div class="input-field col s3">
+        <button id="remove_jug" class="btn red">Remove Jug</button>
+      </div>
+      <div class="input-field col s4">
+        <input id="target" class="validate" type="number" min="1" required>
+        <label for="target">Target water amount</label>
+        <span class="helper-text" data-error="Please enter a positive integer"></span>
+      </div>
+      <div class="input-field col s2">
+        <button id="run_jugs" class="btn">Run</button>
+      </div>
+    </div>
+    <div id="jugs"></div>
+    <div id="results_modal" class="modal">
+      <div class="modal-content">
+        <h4>results</h4>
+        <div id="results"></div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close btn-flat">Close</a>
+      </div>
+    </div>
   </main>
   <insert-html link="https://swag31415.github.io/Portfolio/inserts/foot.html"></insert-html>
   <!-- HTML Inserts -->
   <script src="https://swag31415.github.io/Portfolio/js/html_inserts.js"></script>
+  <!-- JQuery Slim -->
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" 
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous">
+  </script>
   <!-- Our Scripts -->
   <script src="js/main.js"></script>
 </body>
